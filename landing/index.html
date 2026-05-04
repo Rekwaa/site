@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekwa — rekwa.xyz</title>
+    <meta name="description" content="Portfolio de Rekwa, étudiant en cybersécurité. CV, write-ups CTF et projets.">
+    <meta property="og:title" content="Rekwa — rekwa.xyz">
+    <meta property="og:description" content="Portfolio cybersécurité · CV · Write-ups CTF">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor-glow"></div>
+
+    <main class="main">
+        <div class="container">
+
+            <header class="brand">
+                <div class="brand-logo">
+                    <span class="logo-bracket">[</span>rekwa<span class="logo-bracket">]</span>
+                </div>
+                <p class="brand-tagline">// portfolio · cybersécurité</p>
+            </header>
+
+            <section class="intro">
+                <h1 class="intro-title">
+                    Salut, moi c'est <span class="intro-name">Rekwa</span><span class="cursor-blink">_</span>
+                </h1>
+                <p class="intro-text">
+                    Étudiant en <span class="accent">cybersécurité</span>, joueur de <span class="accent">CTF</span> et bidouilleur en <span class="accent">Python</span>.
+                    Bienvenue sur mon hub — choisis ce que tu veux explorer.
+                </p>
+            </section>
+
+            <section class="cards">
+                <a href="https://cv.rekwa.xyz" class="card card-cv">
+                    <div class="card-bg"></div>
+                    <div class="card-meta">
+                        <span class="card-label">01</span>
+                        <span class="card-tag">CV</span>
+                    </div>
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">Curriculum Vitae</h2>
+                    <p class="card-desc">
+                        Parcours, compétences techniques, projets et expériences.
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-url">cv.rekwa.xyz</span>
+                        <span class="card-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="https://write-ups.rekwa.xyz" class="card card-writeups">
+                    <div class="card-bg"></div>
+                    <div class="card-meta">
+                        <span class="card-label">02</span>
+                        <span class="card-tag">CTF</span>
+                    </div>
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                            <line x1="14" y1="4" x2="10" y2="20"/>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">Write-ups</h2>
+                    <p class="card-desc">
+                        Mes solutions et analyses détaillées de challenges Capture The Flag.
+                    </p>
+                    <div class="card-footer">
+                        <span class="card-url">write-ups.rekwa.xyz</span>
+                        <span class="card-arrow">→</span>
+                    </div>
+                </a>
+            </section>
+
+            <section class="info-strip">
+                <div class="info-item">
+                    <span class="info-label">Localisation</span>
+                    <span class="info-value">Belgique 🇧🇪</span>
+                </div>
+                <div class="info-divider"></div>
+                <div class="info-item">
+                    <span class="info-label">Spécialité</span>
+                    <span class="info-value">Cybersec</span>
+                </div>
+                <div class="info-divider"></div>
+                <div class="info-item">
+                    <span class="info-label">Statut</span>
+                    <span class="info-value">Étudiant</span>
+                </div>
+                <div class="info-divider"></div>
+                <div class="info-item">
+                    <span class="info-label">GitHub</span>
+                    <a href="https://github.com/Rekwaa" target="_blank" rel="noopener" class="info-link">@Rekwaa</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>© <span id="year"></span> Rekwa · rekwa.xyz</p>
+            <p class="footer-mono">// always be hacking</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const glow = document.querySelector('.cursor-glow');
+        if (window.matchMedia('(hover: hover)').matches) {
+            document.addEventListener('mousemove', (e) => {
+                glow.style.left = e.clientX + 'px';
+                glow.style.top = e.clientY + 'px';
+            });
+        } else {
+            glow.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

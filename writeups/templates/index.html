@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="hero-small">
+    <div class="container">
+        <p class="hero-greeting">// archives des challenges résolus</p>
+        <h1 class="hero-title">Write-ups</h1>
+        <p class="hero-subtitle">
+            {% if stats.total > 0 %}
+                <span class="accent">{{ stats.total }}</span> write-up{{ 's' if stats.total > 1 else '' }} ·
+                <span class="accent">{{ stats.by_ctf | length }}</span> CTF{{ 's' if stats.by_ctf | length > 1 else '' }}
+            {% else %}
+                Bientôt rempli avec mes solutions de challenges.
+            {% endif %}
+        </p>
+    </div>
+</header>
+
+{% if writeups %}
+<section class="filter-bar">
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" data-category="all">
+                <span>Tous</span>
+                <span class="filter-count">{{ stats.total }}</span>
+            </button>
+            {% for cat_slug, cat_info in categories.items() %}
+                {% if stats.by_category.get(cat_slug, 0) > 0 %}
+                <button class="filter-btn" data-category="{{ cat_slug }}">
+                    <span class="filter-icon" style="color: {{ cat_info.color }}">{{ cat_info.icon }}</span>
+                    <span>{{ cat_info.label }}</span>
+                    <span class="filter-count">{{ stats.by_category[cat_slug] }}</span>
+                </button>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="search-wrap">
+            <input type="text" id="search" placeholder="Rechercher (titre, ctf, tag)..." class="search-input">
+        </div>
+    </div>
+</section>
+
+<section class="writeups-section">
+    <div class="container">
+        <div class="writeups-grid" id="writeups-grid">
+            {% for wu in writeups %}
+            <a href="{{ wu.url }}"
+               class="writeup-card"
+               data-category="{{ wu.category }}"
+               data-search="{{ (wu.title ~ ' ' ~ wu.ctf ~ ' ' ~ (wu.tags | join(' '))) | lower }}">
+                <div class="card-header">
+                    <span class="card-category" style="color: {{ wu.category_info.color }}">
+                        {{ wu.category_info.icon }} {{ wu.category_info.label }}
+                    </span>
+                    <span class="card-difficulty difficulty-{{ wu.difficulty }}">
+                        {% for i in range(wu.difficulty_info.level) %}●{% endfor %}{% for i in range(4 - wu.difficulty_info.level) %}<span class="dim">●</span>{% endfor %}
+                    </span>
+                </div>
+                <h2 class="card-title">{{ wu.title }}</h2>
+                <p class="card-ctf">{{ wu.ctf }}</p>
+                {% if wu.tags %}
+                <div class="card-tags">
+                    {% for tag in wu.tags[:3] %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <div class="card-footer">
+                    <time datetime="{{ wu.date_iso }}">{{ wu.date_str }}</time>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <p class="no-results" id="no-results" style="display:none;">Aucun résultat.</p>
+    </div>
+</section>
+{% else %}
+<section class="empty-state">
+    <div class="container">
+        <div class="empty-card">
+            <div class="empty-icon">{ }</div>
+            <h2>Aucun write-up pour le moment</h2>
+            <p>Ajoute un fichier <code>.md</code> dans le dossier <code>writeups/</code> pour commencer.</p>
+            <pre class="empty-code"><span class="comment"># Format attendu</span>
+<span class="punct">---</span>
+<span class="key">title:</span> <span class="str">"Mon premier challenge"</span>
+<span class="key">ctf:</span> <span class="str">"PicoCTF 2025"</span>
+<span class="key">category:</span> <span class="str">"web"</span>
+<span class="key">difficulty:</span> <span class="str">"easy"</span>
+<span class="key">date:</span> <span class="str">"2026-01-15"</span>
+<span class="key">tags:</span> [<span class="str">"sqli"</span>, <span class="str">"login bypass"</span>]
+<span class="punct">---</span>
+
+<span class="comment"># Description</span>
+Le contenu du write-up en markdown...</pre>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.writeup-card');
+    const searchInput = document.getElementById('search');
+    const noResults = document.getElementById('no-results');
+    let activeCategory = 'all';
+
+    function applyFilters() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        let visible = 0;
+        cards.forEach(card => {
+            const matchesCategory = activeCategory === 'all' || card.dataset.category === activeCategory;
+            const matchesSearch = !searchTerm || card.dataset.search.includes(searchTerm);
+            if (matchesCategory && matchesSearch) {
+                card.style.display = '';
+                visible++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        noResults.style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeCategory = btn.dataset.category;
+            applyFilters();
+        });
+    });
+
+    searchInput.addEventListener('input', applyFilters);
+</script>
+{% endblock %}

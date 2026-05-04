@@ -1,0 +1,38 @@
+/* Syntax highlighting — Pygments / codehilite — adapted dark theme */
+.highlight { background: transparent; }
+.highlight .hll { background-color: #2d2d30; }
+.highlight .c, .highlight .ch, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs { color: #6a737d; font-style: italic; }
+.highlight .err { color: #f87171; }
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt { color: #f97583; font-weight: 500; }
+.highlight .o { color: #f97583; }
+.highlight .cp { color: #6a737d; }
+.highlight .gd { color: #f87171; background-color: #2d1414; }
+.highlight .ge { font-style: italic; }
+.highlight .gr { color: #f87171; }
+.highlight .gh { color: #60a5fa; font-weight: bold; }
+.highlight .gi { color: #34d399; background-color: #14271a; }
+.highlight .go { color: #a1a1aa; }
+.highlight .gp { color: #60a5fa; font-weight: bold; }
+.highlight .gs { font-weight: bold; }
+.highlight .gu { color: #a78bfa; font-weight: bold; }
+.highlight .gt { color: #f87171; }
+.highlight .l, .highlight .ld { color: #a5d6ff; }
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo { color: #fbbf24; }
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss { color: #a5d6ff; }
+.highlight .n, .highlight .nb, .highlight .bp { color: #fafafa; }
+.highlight .nc { color: #fbbf24; font-weight: 500; }
+.highlight .no { color: #79c0ff; }
+.highlight .nd { color: #d2a8ff; }
+.highlight .ni { color: #f97583; }
+.highlight .ne { color: #f97583; font-weight: bold; }
+.highlight .nf, .highlight .fm { color: #d2a8ff; font-weight: 500; }
+.highlight .nl { color: #fbbf24; }
+.highlight .nn { color: #fbbf24; }
+.highlight .nx { color: #fafafa; }
+.highlight .py { color: #fafafa; }
+.highlight .nt { color: #79c0ff; }
+.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm { color: #79c0ff; }
+.highlight .ow { color: #f97583; font-weight: bold; }
+.highlight .w { color: #1c1c1c; }
+.highlight .p { color: #a1a1aa; }
+.highlight .pi { color: #a1a1aa; }

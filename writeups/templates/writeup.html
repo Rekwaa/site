@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}{{ wu.title }} · {{ wu.ctf }} · Write-ups{% endblock %}
+{% block description %}Write-up de {{ wu.title }} ({{ wu.ctf }}) — catégorie {{ wu.category_info.label }}.{% endblock %}
+
+{% block content %}
+<article class="writeup">
+    <header class="writeup-header">
+        <div class="container container-narrow">
+            <a href="/" class="back-link">← retour à l'index</a>
+            <div class="writeup-meta">
+                <span class="card-category" style="color: {{ wu.category_info.color }}">
+                    {{ wu.category_info.icon }} {{ wu.category_info.label }}
+                </span>
+                <span class="card-difficulty difficulty-{{ wu.difficulty }}">
+                    {{ wu.difficulty_info.label }}
+                </span>
+                {% if wu.points %}
+                <span class="meta-item">{{ wu.points }} pts</span>
+                {% endif %}
+                <span class="meta-item">{{ wu.date_str }}</span>
+            </div>
+            <h1 class="writeup-title">{{ wu.title }}</h1>
+            <p class="writeup-ctf">{{ wu.ctf }}</p>
+            {% if wu.tags %}
+            <div class="card-tags">
+                {% for tag in wu.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="writeup-body">
+        <div class="container container-narrow">
+            <div class="prose">
+                {{ wu.html | safe }}
+            </div>
+        </div>
+    </div>
+
+    <footer class="writeup-footer">
+        <div class="container container-narrow">
+            <a href="/" class="btn-back">← Tous les write-ups</a>
+        </div>
+    </footer>
+</article>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Add copy buttons to code blocks
+    document.querySelectorAll('pre').forEach(pre => {
+        const btn = document.createElement('button');
+        btn.className = 'copy-btn';
+        btn.textContent = 'copy';
+        btn.onclick = () => {
+            const code = pre.querySelector('code') || pre;
+            navigator.clipboard.writeText(code.textContent);
+            btn.textContent = 'copied ✓';
+            setTimeout(() => btn.textContent = 'copy', 2000);
+        };
+        pre.style.position = 'relative';
+        pre.appendChild(btn);
+    });
+</script>
+{% endblock %}

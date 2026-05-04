@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Write-ups · Ekwa{% endblock %}</title>
+    <meta name="description" content="{% block description %}Write-ups CTF de Ekwa — solutions et analyses détaillées.{% endblock %}">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/highlight.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    {% block head_extra %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-bracket">[</span>ekwa<span class="logo-bracket">]</span><span class="logo-suffix">/writeups</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Accueil</a></li>
+                <li><a href="https://cv.rekwa.xyz" class="nav-external">CV ↗</a></li>
+                <li><a href="https://rekwa.xyz" class="nav-external">Hub ↗</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-bracket">[</span>ekwa<span class="logo-bracket">]</span>
+                    <p>Write-ups CTF · Toujours en apprentissage.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://cv.rekwa.xyz">CV</a>
+                    <a href="https://github.com/Rekwaa" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© <span id="year"></span> Ekwa · write-ups.rekwa.xyz</p>
+                <p class="footer-mono">// keep hacking</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

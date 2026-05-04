@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}{{ category_info.label }} · Write-ups · Ekwa{% endblock %}
+
+{% block content %}
+<header class="hero-small">
+    <div class="container">
+        <a href="/" class="back-link">← tous les write-ups</a>
+        <p class="hero-greeting" style="color: {{ category_info.color }}">// catégorie · {{ category_info.icon }} {{ category_info.label }}</p>
+        <h1 class="hero-title">{{ category_info.label }}</h1>
+        <p class="hero-subtitle">
+            <span class="accent">{{ writeups | length }}</span> write-up{{ 's' if writeups | length > 1 else '' }} dans cette catégorie
+        </p>
+    </div>
+</header>
+
+<section class="writeups-section">
+    <div class="container">
+        <div class="writeups-grid">
+            {% for wu in writeups %}
+            <a href="{{ wu.url }}" class="writeup-card">
+                <div class="card-header">
+                    <span class="card-category" style="color: {{ wu.category_info.color }}">
+                        {{ wu.category_info.icon }} {{ wu.category_info.label }}
+                    </span>
+                    <span class="card-difficulty difficulty-{{ wu.difficulty }}">
+                        {% for i in range(wu.difficulty_info.level) %}●{% endfor %}{% for i in range(4 - wu.difficulty_info.level) %}<span class="dim">●</span>{% endfor %}
+                    </span>
+                </div>
+                <h2 class="card-title">{{ wu.title }}</h2>
+                <p class="card-ctf">{{ wu.ctf }}</p>
+                {% if wu.tags %}
+                <div class="card-tags">
+                    {% for tag in wu.tags[:3] %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <div class="card-footer">
+                    <time datetime="{{ wu.date_iso }}">{{ wu.date_str }}</time>
+                    <span class="card-arrow">→</span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
