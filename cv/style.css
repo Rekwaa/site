@@ -663,3 +663,62 @@ body::before {
     .section { padding: 4rem 0; }
     .cursor-glow { display: none; }
 }
+
+/* ============ TIMELINE SUBTITLES ============ */
+.timeline-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.timeline-subtitle-spaced {
+    margin-top: 3rem;
+}
+
+.timeline-place {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
+    margin-top: 0.25rem;
+}
+
+/* ============ HOBBIES ============ */
+.hobbies {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+.hobbies-title {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.hobbies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.hobby-tag {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    padding: 0.4rem 0.85rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+}
+
+.hobby-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
