@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julien Vanherf — Étudiant en Cybersécurité</title>
-    <meta name="description" content="CV de Julien Vanherf, étudiant en cybersécurité à HELMo Liège, joueur CTF, développeur Python.">
+    <meta name="description" content="CV de Julien Vanherf, étudiant en cybersécurité à HELMo Liège, spécialisé en sécurité automobile et embarquée, joueur CTF, développeur Python.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,28 +19,29 @@
                 <span class="logo-bracket">[</span>vanherf<span class="logo-bracket">]</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="https://write-ups.rekwa.xyz" class="nav-external">Write-ups ↗</a></li>
-                <li><a href="https://rekwa.xyz" class="nav-external">Accueil ↗</a></li>
+                <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Compétences</a></li>
+                <li><a href="#experience" data-i18n="nav_experience">Expérience</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
+                <li><a href="https://write-ups.rekwa.xyz" class="nav-external" data-i18n="nav_writeups">Write-ups ↗</a></li>
+                <li><a href="https://rekwa.xyz" class="nav-external" data-i18n="nav_home">Accueil ↗</a></li>
+                <li><button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">EN</button></li>
             </ul>
         </div>
     </nav>
 
     <header class="hero">
         <div class="hero-content">
-            <p class="hero-greeting">// Bienvenue sur mon portfolio</p>
+            <p class="hero-greeting" data-i18n="hero_greeting">// Bienvenue sur mon portfolio</p>
             <h1 class="hero-title">
                 Julien Vanherf<span class="cursor-blink">_</span>
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
                 Étudiant en <span class="accent">Cybersécurité</span> · Joueur <span class="accent">CTF</span> · Développeur <span class="accent">Python</span>
             </p>
             <div class="hero-actions">
-                <a href="#about" class="btn btn-primary">En savoir plus</a>
-                <a href="https://write-ups.rekwa.xyz" class="btn btn-secondary">Voir mes write-ups</a>
+                <a href="#about" class="btn btn-primary" data-i18n="hero_btn_more">En savoir plus</a>
+                <a href="https://write-ups.rekwa.xyz" class="btn btn-secondary" data-i18n="hero_btn_writeups">Voir mes write-ups</a>
             </div>
         </div>
         <div class="hero-scroll">
@@ -53,28 +54,28 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">01</span>
-                <h2 class="section-title">À propos</h2>
+                <h2 class="section-title" data-i18n="about_title">À propos</h2>
             </div>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Passionné d'apprentissage, je me suis lancé dans ces études afin de mettre à profit mon savoir-faire et ma <strong>capacité d'analyse</strong>. Je suis quelqu'un qui aime apprendre, ce qui fait que le domaine de la <strong>cybersécurité</strong> m'était destiné.</p>
-                    <p>En dernière année de bachelier en cybersécurité à <strong>HELMo Liège</strong>, je me spécialise dans la sécurité des <strong>systèmes embarqués et automobiles</strong> (bus CAN, ECU, protocoles véhicule), avec un intérêt aussi bien pour l'<strong>offensive</strong> que pour la <strong>defensive security</strong>. Je consacre aussi mon temps libre aux CTF, au reverse engineering et au développement de projets en Python. J'aime comprendre comment les choses fonctionnent — et surtout comment elles cassent.</p>
+                    <p data-i18n="about_p1">Passionné d'apprentissage, je me suis lancé dans ces études afin de mettre à profit mon savoir-faire et ma <strong>capacité d'analyse</strong>. Je suis quelqu'un qui aime apprendre, ce qui fait que le domaine de la <strong>cybersécurité</strong> m'était destiné.</p>
+                    <p data-i18n="about_p2">En dernière année de bachelier en cybersécurité à <strong>HELMo Liège</strong>, je me spécialise dans la sécurité des <strong>systèmes embarqués et automobiles</strong> (bus CAN, ECU, protocoles véhicule), avec un intérêt aussi bien pour l'<strong>offensive</strong> que pour la <strong>defensive security</strong>. Je consacre aussi mon temps libre aux CTF, au reverse engineering et au développement de projets en Python. J'aime comprendre comment les choses fonctionnent — et surtout comment elles cassent.</p>
                 </div>
                 <div class="about-info">
                     <div class="info-card">
-                        <span class="info-label">Statut</span>
-                        <span class="info-value">Étudiant</span>
+                        <span class="info-label" data-i18n="info_status_label">Statut</span>
+                        <span class="info-value" data-i18n="info_status_value">Étudiant</span>
                     </div>
                     <div class="info-card">
-                        <span class="info-label">École</span>
+                        <span class="info-label" data-i18n="info_school_label">École</span>
                         <span class="info-value">HELMo Liège</span>
                     </div>
                     <div class="info-card">
-                        <span class="info-label">Localisation</span>
+                        <span class="info-label" data-i18n="info_location_label">Localisation</span>
                         <span class="info-value">Liège 🇧🇪</span>
                     </div>
                     <div class="info-card">
-                        <span class="info-label">Langues</span>
+                        <span class="info-label" data-i18n="info_langs_label">Langues</span>
                         <span class="info-value">FR · EN (C1-C2)</span>
                     </div>
                 </div>
@@ -86,12 +87,12 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">02</span>
-                <h2 class="section-title">Compétences</h2>
+                <h2 class="section-title" data-i18n="skills_title">Compétences</h2>
             </div>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">{ }</div>
-                    <h3>Langages</h3>
+                    <h3 data-i18n="skill1_title">Langages</h3>
                     <ul class="skill-list">
                         <li>Python</li>
                         <li>JavaScript</li>
@@ -101,24 +102,24 @@
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">⚔</div>
-                    <h3>Cybersécurité</h3>
+                    <h3 data-i18n="skill2_title">Cybersécurité</h3>
                     <ul class="skill-list">
                         <li>Reverse engineering (Ghidra)</li>
-                        <li>Cryptographie</li>
-                        <li>Analyse de risques</li>
-                        <li>CTF (pwn, exploitation binaire)</li>
-                        <li>Offensive & defensive security</li>
+                        <li data-i18n="skill2_item2">Cryptographie</li>
+                        <li data-i18n="skill2_item3">Analyse de risques</li>
+                        <li data-i18n="skill2_item4">CTF (pwn, exploitation binaire)</li>
+                        <li data-i18n="skill2_item5">Offensive &amp; defensive security</li>
                     </ul>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">⚙</div>
-                    <h3>Hardware, Réseau & Embarqué</h3>
+                    <h3 data-i18n="skill3_title">Hardware, Réseau &amp; Embarqué</h3>
                     <ul class="skill-list">
-                        <li>Gestion réseau</li>
-                        <li>Diagnostic hardware</li>
-                        <li>Réparation hardware</li>
-                        <li>Systèmes embarqués</li>
-                        <li>Bus CAN (python-can, CANable)</li>
+                        <li data-i18n="skill3_item1">Gestion réseau</li>
+                        <li data-i18n="skill3_item2">Diagnostic hardware</li>
+                        <li data-i18n="skill3_item3">Réparation hardware</li>
+                        <li data-i18n="skill3_item4">Systèmes embarqués</li>
+                        <li data-i18n="skill3_item5">Bus CAN (python-can, CANable)</li>
                     </ul>
                 </div>
                 <div class="skill-card">
@@ -126,8 +127,8 @@
                     <h3>Soft skills</h3>
                     <ul class="skill-list">
                         <li>Patience</li>
-                        <li>Adaptabilité</li>
-                        <li>Créativité</li>
+                        <li data-i18n="skill4_item2">Adaptabilité</li>
+                        <li data-i18n="skill4_item3">Créativité</li>
                         <li>Process flow</li>
                     </ul>
                 </div>
@@ -139,16 +140,16 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">03</span>
-                <h2 class="section-title">Formation &amp; Expérience</h2>
+                <h2 class="section-title" data-i18n="experience_title">Formation &amp; Expérience</h2>
             </div>
 
-            <h3 class="timeline-subtitle">Formation</h3>
+            <h3 class="timeline-subtitle" data-i18n="formation_subtitle">Formation</h3>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2022 — 2027</span>
-                        <h3>Bachelier en Cybersécurité</h3>
+                        <h3 data-i18n="degree1_title">Bachelier en Cybersécurité</h3>
                         <p class="timeline-place">HELMo Liège — Campus Guillemins</p>
                     </div>
                 </div>
@@ -156,7 +157,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2021 — 2022</span>
-                        <h3>Bachelier en Sciences Informatiques</h3>
+                        <h3 data-i18n="degree2_title">Bachelier en Sciences Informatiques</h3>
                         <p class="timeline-place">Université de Liège — Campus du Sart Tilman</p>
                     </div>
                 </div>
@@ -164,27 +165,27 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2016 — 2021</span>
-                        <h3>Diplôme d'informatique (CESS)</h3>
+                        <h3 data-i18n="degree3_title">Diplôme d'informatique (CESS)</h3>
                         <p class="timeline-place">Institut St J. Berchmans-Ste Marie</p>
                     </div>
                 </div>
             </div>
 
-            <h3 class="timeline-subtitle timeline-subtitle-spaced">Expérience professionnelle</h3>
+            <h3 class="timeline-subtitle timeline-subtitle-spaced" data-i18n="exp_subtitle">Expérience professionnelle</h3>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2025 — 2026</span>
-                        <h3>Étudiant — Support Client & Support IT</h3>
-                        <p class="timeline-place">MEGA (fournisseur d'énergie belge) — Liège</p>
+                        <h3 data-i18n="job0_title">Étudiant — Support Client &amp; Support IT</h3>
+                        <p class="timeline-place" data-i18n="job0_place">MEGA (fournisseur d'énergie belge) — Liège</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2024</span>
-                        <h3>Étudiant — Workplace Technician</h3>
+                        <h3 data-i18n="job1_title">Étudiant — Workplace Technician</h3>
                         <p class="timeline-place">NRB — Liège / Herstal</p>
                     </div>
                 </div>
@@ -192,7 +193,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2022 — 2024</span>
-                        <h3>Étudiant — Ouvrier de piste de Karting</h3>
+                        <h3 data-i18n="job2_title">Étudiant — Ouvrier de piste de Karting</h3>
                         <p class="timeline-place">R.K.I. (SRL) — Liège / Grivegnée</p>
                     </div>
                 </div>
@@ -200,15 +201,15 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2020 — 2022</span>
-                        <h3>Étudiant — Ouvrier de parc de bus</h3>
+                        <h3 data-i18n="job3_title">Étudiant — Ouvrier de parc de bus</h3>
                         <p class="timeline-place">TEC Liège-Verviers — Liège</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">Vacances scolaires</span>
-                        <h3>Étudiant — Magasinier</h3>
+                        <span class="timeline-date" data-i18n="date_holidays">Vacances scolaires</span>
+                        <h3 data-i18n="job4_title">Étudiant — Magasinier</h3>
                         <p class="timeline-place">TEC Liège-Verviers — Liège</p>
                     </div>
                 </div>
@@ -220,62 +221,62 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-number">04</span>
-                <h2 class="section-title">Projets &amp; Centres d'intérêt</h2>
+                <h2 class="section-title" data-i18n="projects_title">Projets &amp; Centres d'intérêt</h2>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-tag">AUTOMOTIVE</span>
                     </div>
-                    <h3>Car Hacking — Škoda Fabia</h3>
-                    <p>Reverse engineering et prise de contrôle d'un tableau de bord Škoda Fabia via bus CAN (CANable 2.0 + python-can, Kali Linux), dans le cadre du Car Hacking Village de BSides Luxembourg.</p>
+                    <h3 data-i18n="proj0_title">Car Hacking — Škoda Fabia</h3>
+                    <p data-i18n="proj0_desc">Reverse engineering et prise de contrôle d'un tableau de bord Škoda Fabia via bus CAN (CANable 2.0 + python-can, Kali Linux), dans le cadre du Car Hacking Village de BSides Luxembourg.</p>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-tag">EMBEDDED</span>
                     </div>
-                    <h3>Simulation d'ECU en Python</h3>
-                    <p>Script Python simulant plusieurs ECU sur un même bus CAN, accompagné d'un write-up technique détaillant l'approche.</p>
+                    <h3 data-i18n="proj5_title">Simulation d'ECU en Python</h3>
+                    <p data-i18n="proj5_desc">Script Python simulant plusieurs ECU sur un même bus CAN, accompagné d'un write-up technique détaillant l'approche.</p>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-tag">CRYPTO</span>
                     </div>
-                    <h3>CAST-256 en Python</h3>
-                    <p>Recréation du système de cryptage CAST-256 en Python, dans le cadre de mon cours de mathématiques à HELMo.</p>
+                    <h3 data-i18n="proj1_title">CAST-256 en Python</h3>
+                    <p data-i18n="proj1_desc">Recréation du système de cryptage CAST-256 en Python, dans le cadre de mon cours de mathématiques à HELMo.</p>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-tag">CYBERSEC</span>
                     </div>
-                    <h3>Ransomware</h3>
-                    <p>Développement d'un ransomware éducatif dans le cadre de mon cours de cybersécurité à HELMo.</p>
+                    <h3 data-i18n="proj2_title">Ransomware</h3>
+                    <p data-i18n="proj2_desc">Développement d'un ransomware éducatif dans le cadre de mon cours de cybersécurité à HELMo.</p>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
                         <span class="project-tag">GAMEDEV</span>
                     </div>
-                    <h3>Roguelike en Python</h3>
-                    <p>Développement d'un jeu de type roguelike en Python, présenté comme TFE de secondaire.</p>
+                    <h3 data-i18n="proj3_title">Roguelike en Python</h3>
+                    <p data-i18n="proj3_desc">Développement d'un jeu de type roguelike en Python, présenté comme TFE de secondaire.</p>
                 </div>
                 <a href="https://write-ups.rekwa.xyz" class="project-card">
                     <div class="project-header">
                         <span class="project-tag">CTF</span>
                         <span class="project-arrow">↗</span>
                     </div>
-                    <h3>Write-ups CTF</h3>
-                    <p>Mes solutions et analyses détaillées de challenges Capture The Flag, classées par catégorie.</p>
+                    <h3 data-i18n="proj4_title">Write-ups CTF</h3>
+                    <p data-i18n="proj4_desc">Mes solutions et analyses détaillées de challenges Capture The Flag, classées par catégorie.</p>
                 </a>
             </div>
 
             <div class="hobbies">
-                <h3 class="hobbies-title">// Loisirs</h3>
+                <h3 class="hobbies-title" data-i18n="hobbies_title">// Loisirs</h3>
                 <div class="hobbies-list">
-                    <span class="hobby-tag">Sport automobile</span>
-                    <span class="hobby-tag">Courses de simulation</span>
+                    <span class="hobby-tag" data-i18n="hobby1">Sport automobile</span>
+                    <span class="hobby-tag" data-i18n="hobby2">Courses de simulation</span>
                     <span class="hobby-tag">Karting</span>
-                    <span class="hobby-tag">Systèmes embarqués</span>
-                    <span class="hobby-tag">Jeux vidéo</span>
+                    <span class="hobby-tag" data-i18n="hobby4">Systèmes embarqués</span>
+                    <span class="hobby-tag" data-i18n="hobby5">Jeux vidéo</span>
                 </div>
             </div>
         </div>
@@ -286,10 +287,10 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="logo-bracket">[</span>vanherf<span class="logo-bracket">]</span>
-                    <p>Construit avec ❤ et beaucoup de café.</p>
+                    <p data-i18n="footer_tagline">Construit avec ❤ et beaucoup de café.</p>
                 </div>
                 <div class="footer-links">
-                    <a href="https://rekwa.xyz">Accueil</a>
+                    <a href="https://rekwa.xyz" data-i18n="footer_home">Accueil</a>
                     <a href="https://write-ups.rekwa.xyz">Write-ups</a>
                     <a href="https://github.com/Rekwaa" target="_blank" rel="noopener">GitHub</a>
                 </div>
@@ -333,6 +334,196 @@
 
         document.querySelectorAll('.section, .skill-card, .project-card, .timeline-item').forEach(el => {
             observer.observe(el);
+        });
+
+        // ============ TRADUCTION FR / EN ============
+        const translations = {
+            fr: {
+                _title: "Julien Vanherf — Étudiant en Cybersécurité",
+                _description: "CV de Julien Vanherf, étudiant en cybersécurité à HELMo Liège, spécialisé en sécurité automobile et embarquée, joueur CTF, développeur Python.",
+
+                nav_about: "À propos",
+                nav_skills: "Compétences",
+                nav_experience: "Expérience",
+                nav_projects: "Projets",
+                nav_writeups: "Write-ups ↗",
+                nav_home: "Accueil ↗",
+
+                hero_greeting: "// Bienvenue sur mon portfolio",
+                hero_subtitle: 'Étudiant en <span class="accent">Cybersécurité</span> · Joueur <span class="accent">CTF</span> · Développeur <span class="accent">Python</span>',
+                hero_btn_more: "En savoir plus",
+                hero_btn_writeups: "Voir mes write-ups",
+
+                about_title: "À propos",
+                about_p1: "Passionné d'apprentissage, je me suis lancé dans ces études afin de mettre à profit mon savoir-faire et ma <strong>capacité d'analyse</strong>. Je suis quelqu'un qui aime apprendre, ce qui fait que le domaine de la <strong>cybersécurité</strong> m'était destiné.",
+                about_p2: "En dernière année de bachelier en cybersécurité à <strong>HELMo Liège</strong>, je me spécialise dans la sécurité des <strong>systèmes embarqués et automobiles</strong> (bus CAN, ECU, protocoles véhicule), avec un intérêt aussi bien pour l'<strong>offensive</strong> que pour la <strong>defensive security</strong>. Je consacre aussi mon temps libre aux CTF, au reverse engineering et au développement de projets en Python. J'aime comprendre comment les choses fonctionnent — et surtout comment elles cassent.",
+
+                info_status_label: "Statut",
+                info_status_value: "Étudiant",
+                info_school_label: "École",
+                info_location_label: "Localisation",
+                info_langs_label: "Langues",
+
+                skills_title: "Compétences",
+                skill1_title: "Langages",
+                skill2_title: "Cybersécurité",
+                skill2_item2: "Cryptographie",
+                skill2_item3: "Analyse de risques",
+                skill2_item4: "CTF (pwn, exploitation binaire)",
+                skill2_item5: "Offensive &amp; defensive security",
+                skill3_title: "Hardware, Réseau &amp; Embarqué",
+                skill3_item1: "Gestion réseau",
+                skill3_item2: "Diagnostic hardware",
+                skill3_item3: "Réparation hardware",
+                skill3_item4: "Systèmes embarqués",
+                skill3_item5: "Bus CAN (python-can, CANable)",
+                skill4_item2: "Adaptabilité",
+                skill4_item3: "Créativité",
+
+                experience_title: "Formation &amp; Expérience",
+                formation_subtitle: "Formation",
+                exp_subtitle: "Expérience professionnelle",
+                degree1_title: "Bachelier en Cybersécurité",
+                degree2_title: "Bachelier en Sciences Informatiques",
+                degree3_title: "Diplôme d'informatique (CESS)",
+                job0_title: "Étudiant — Support Client &amp; Support IT",
+                job0_place: "MEGA (fournisseur d'énergie belge) — Liège",
+                job1_title: "Étudiant — Workplace Technician",
+                job2_title: "Étudiant — Ouvrier de piste de Karting",
+                job3_title: "Étudiant — Ouvrier de parc de bus",
+                job4_title: "Étudiant — Magasinier",
+                date_holidays: "Vacances scolaires",
+
+                projects_title: "Projets &amp; Centres d'intérêt",
+                proj0_title: "Car Hacking — Škoda Fabia",
+                proj0_desc: "Reverse engineering et prise de contrôle d'un tableau de bord Škoda Fabia via bus CAN (CANable 2.0 + python-can, Kali Linux), dans le cadre du Car Hacking Village de BSides Luxembourg.",
+                proj5_title: "Simulation d'ECU en Python",
+                proj5_desc: "Script Python simulant plusieurs ECU sur un même bus CAN, accompagné d'un write-up technique détaillant l'approche.",
+                proj1_title: "CAST-256 en Python",
+                proj1_desc: "Recréation du système de cryptage CAST-256 en Python, dans le cadre de mon cours de mathématiques à HELMo.",
+                proj2_title: "Ransomware",
+                proj2_desc: "Développement d'un ransomware éducatif dans le cadre de mon cours de cybersécurité à HELMo.",
+                proj3_title: "Roguelike en Python",
+                proj3_desc: "Développement d'un jeu de type roguelike en Python, présenté comme TFE de secondaire.",
+                proj4_title: "Write-ups CTF",
+                proj4_desc: "Mes solutions et analyses détaillées de challenges Capture The Flag, classées par catégorie.",
+
+                hobbies_title: "// Loisirs",
+                hobby1: "Sport automobile",
+                hobby2: "Courses de simulation",
+                hobby4: "Systèmes embarqués",
+                hobby5: "Jeux vidéo",
+
+                footer_tagline: "Construit avec ❤ et beaucoup de café.",
+                footer_home: "Accueil",
+            },
+            en: {
+                _title: "Julien Vanherf — Cybersecurity Student",
+                _description: "Portfolio of Julien Vanherf, cybersecurity student at HELMo Liège, specialized in automotive and embedded security, CTF player, Python developer.",
+
+                nav_about: "About",
+                nav_skills: "Skills",
+                nav_experience: "Experience",
+                nav_projects: "Projects",
+                nav_writeups: "Write-ups ↗",
+                nav_home: "Home ↗",
+
+                hero_greeting: "// Welcome to my portfolio",
+                hero_subtitle: 'Student in <span class="accent">Cybersecurity</span> · <span class="accent">CTF</span> Player · <span class="accent">Python</span> Developer',
+                hero_btn_more: "Learn more",
+                hero_btn_writeups: "View my write-ups",
+
+                about_title: "About",
+                about_p1: "Passionate about learning, I dove into these studies to put my skills and <strong>analytical thinking</strong> to good use. I'm someone who loves learning, which made cybersecurity feel like a natural fit for me.",
+                about_p2: "In my final year of a bachelor's degree in cybersecurity at <strong>HELMo Liège</strong>, I specialize in the security of <strong>embedded and automotive systems</strong> (CAN bus, ECUs, vehicle protocols), with an interest in both <strong>offensive</strong> and <strong>defensive security</strong>. I also spend my free time on CTFs, reverse engineering, and building projects in Python. I like understanding how things work — and especially how they break.",
+
+                info_status_label: "Status",
+                info_status_value: "Student",
+                info_school_label: "School",
+                info_location_label: "Location",
+                info_langs_label: "Languages",
+
+                skills_title: "Skills",
+                skill1_title: "Languages",
+                skill2_title: "Cybersecurity",
+                skill2_item2: "Cryptography",
+                skill2_item3: "Risk analysis",
+                skill2_item4: "CTF (pwn, binary exploitation)",
+                skill2_item5: "Offensive &amp; defensive security",
+                skill3_title: "Hardware, Networking &amp; Embedded",
+                skill3_item1: "Network administration",
+                skill3_item2: "Hardware diagnostics",
+                skill3_item3: "Hardware repair",
+                skill3_item4: "Embedded systems",
+                skill3_item5: "CAN bus (python-can, CANable)",
+                skill4_item2: "Adaptability",
+                skill4_item3: "Creativity",
+
+                experience_title: "Education &amp; Experience",
+                formation_subtitle: "Education",
+                exp_subtitle: "Professional experience",
+                degree1_title: "Bachelor's in Cybersecurity",
+                degree2_title: "Bachelor's in Computer Science",
+                degree3_title: "IT Diploma (CESS)",
+                job0_title: "Student — Customer Support &amp; IT Support",
+                job0_place: "MEGA (Belgian energy provider) — Liège",
+                job1_title: "Student — Workplace Technician",
+                job2_title: "Student — Karting Track Worker",
+                job3_title: "Student — Bus Depot Worker",
+                job4_title: "Student — Warehouse Assistant",
+                date_holidays: "School holidays",
+
+                projects_title: "Projects &amp; Interests",
+                proj0_title: "Car Hacking — Škoda Fabia",
+                proj0_desc: "Reverse engineered and took control of a Škoda Fabia dashboard over CAN bus (CANable 2.0 + python-can, Kali Linux), as part of the Car Hacking Village at BSides Luxembourg.",
+                proj5_title: "ECU Simulation in Python",
+                proj5_desc: "Python script simulating multiple ECUs on a shared CAN bus, along with a technical write-up detailing the approach.",
+                proj1_title: "CAST-256 in Python",
+                proj1_desc: "Reimplementation of the CAST-256 encryption scheme in Python, for my math course at HELMo.",
+                proj2_title: "Ransomware",
+                proj2_desc: "Development of an educational ransomware as part of my cybersecurity course at HELMo.",
+                proj3_title: "Roguelike in Python",
+                proj3_desc: "Development of a roguelike game in Python, presented as my final high school project.",
+                proj4_title: "CTF Write-ups",
+                proj4_desc: "My detailed solutions and analyses of Capture The Flag challenges, sorted by category.",
+
+                hobbies_title: "// Hobbies",
+                hobby1: "Motorsport",
+                hobby2: "Sim racing",
+                hobby4: "Embedded systems",
+                hobby5: "Video games",
+
+                footer_tagline: "Built with ❤ and lots of coffee.",
+                footer_home: "Home",
+            }
+        };
+
+        const langToggle = document.getElementById('lang-toggle');
+        const metaDescription = document.querySelector('meta[name="description"]');
+
+        function applyLanguage(lang) {
+            const dict = translations[lang];
+            document.documentElement.lang = lang;
+            document.title = dict._title;
+            metaDescription.setAttribute('content', dict._description);
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key] !== undefined) {
+                    el.innerHTML = dict[key];
+                }
+            });
+
+            langToggle.textContent = lang === 'fr' ? 'EN' : 'FR';
+            localStorage.setItem('cv-lang', lang);
+        }
+
+        let currentLang = localStorage.getItem('cv-lang') || 'fr';
+        applyLanguage(currentLang);
+
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'fr' ? 'en' : 'fr';
+            applyLanguage(currentLang);
         });
     </script>
 </body>
